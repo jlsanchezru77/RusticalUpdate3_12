@@ -1,0 +1,23 @@
+{% extends "RusticalApp/padre.html" %}
+
+{% load static %}
+
+{% block Changingcontent %}
+<h1></h1>
+<h1></h1>
+<center>
+Para calcular tu proporción de espora de orellana en tu sustrato, puedes usar el siguiente módelo heurístico basado en el tipo de aserrín \(x\):
+
+$$C(A,H)=0.4C_{A}+0.3C_{H} $$
+
+</center>
+<center>
+<form action="/RusticalApp/area/"    method="get">{% csrf_token %}
+Heno    <input type="number" name="lado" id="lado"> <h1></h1>
+Aserrin    <input type="number" name="heno" id="heno"><h1></h1>
+    <input type="submit" value="Calcular">
+ </form>
+
+</center>  
+
+{% endblock %}
